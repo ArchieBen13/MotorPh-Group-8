@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //Variables
+        //Data types - Identifier = Value;
+
+        int empNum;
+        String empName;
+        String birthday;
+        String address;
+        String phoneNumber;
+        String SSS;
+        String Philhealth;
+        String Pagibig;
+        String Tin;
+        String Status;
+        String Position;
+        String Immedsv;
+        double basicSalary = 0;
+        double hourlyRate = 0.0;
+
+
+        System.out.print("Enter employee number:");
+        empNum = scanner.nextInt();
+        switch (empNum) {
+            case 1001:
+                empName = "Garcia Manuel";
+                birthday = "10/11/1983";
+                address = "Valero Carpark Building Valero Street 1227, Makati City";
+                phoneNumber = "966-860-270";
+                SSS = "4-4506057-3";
+                Philhealth = "820126853951";
+                Pagibig = "691295330870";
+                Tin = "442-605-657-000";
+                Status = "regular";
+                Position = "Chief Executive Officer";
+                Immedsv = "N/A";
+                basicSalary = 90000;
+                hourlyRate = 537.71;
+                break;
+            default:
+                empName = "unknown";
+                break;
+
+        }
+        //  System.out.println("Enter your time in (format: HH:mm): ");
+        //  String timeIn = scanner.next();
+        //  System.out.println("Enter your time out (format: HH:mm): ");
+        // String timeOut = scanner.nextLine();
+
+        //double salary = calculateTotalHours(timeIn,timeOut) * hourlyRate;
+        // System.out.println(salary);
+
+        double sssContribution = calculateSSS(basicSalary);
+
+
+    }
+
+    public static double calculateTotalHours(String timeIn, String timeOut) {
+        String[] timeInParts = timeIn.split(":");
+        String[] timeOutParts = timeOut.split(":");
+
+        int hoursIn = Integer.parseInt(timeInParts[0]);
+        int minutesIn = Integer.parseInt(timeInParts[1]);
+        int hoursOut = Integer.parseInt(timeOutParts[0]);
+        int minutesOut = Integer.parseInt(timeOutParts[1]);
+
+        int totalMinutesWorked;
+        double totalHoursWorked;
+
+        totalMinutesWorked = (hoursOut * 60 + minutesOut) - (hoursIn * 60 + minutesIn);
+        totalHoursWorked = (totalMinutesWorked / 60.0);
+
+        return totalHoursWorked;
+
+    }
+
+    public static double calculateSSS(double salary) {
+        if (salary < 3250.00) {
+            return 135.00;
+        } else if (salary <= 24750.00) {
+            double baseSSS = 135.00;
+            double increment = 22.50;
+            int steps = (int) (salary - 3250.00) / 500.00)
+        }
+    }
+}
