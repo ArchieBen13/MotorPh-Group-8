@@ -1,0 +1,502 @@
+package PayrollSystem1.java;
+
+import java.util.Scanner;
+
+public class PayrollSystem {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        long empNum;
+        String empName, birthday = null, address = null, phoneNumber = null, SSS = null, Philhealth = null, Pagibig = null, Tin = null, Status = null, Position = null, ImmediateSupervisor = null; 
+        float basicSalary = 0, weeklyTime = 0, weeklySalary, overTime;
+        float regPay, overtimePay, netPay;
+
+        System.out.print("Enter Employee No.: ");
+        empNum = inp.nextLong();
+        System.out.printf("Enter Basic Salary:");
+        basicSalary = inp.nextLong();
+        System.out.println("Enter Weekly Time:");
+        weeklyTime = inp.nextLong ();
+        
+
+        if (empNum == 1) {
+            empName = "Garcia III, Manuel";
+            birthday = "10/11/1983";
+            address = "Valero Carpark Building Valero Street 1227, Makati City";
+            phoneNumber = "966-860-270";
+            SSS = "44-4506057-3";
+            Philhealth = "820126853951";
+            Pagibig = "691295330870";
+            Tin = "442-605-657-000";
+            Status = "Regular";
+            Position = "Chief Executive Officer";
+            ImmediateSupervisor = "N/A";
+    
+            // ... (other details)
+        } else if (empNum == 2) {
+            empName = "Lim, Antonio";
+            birthday = "6/19/1988";
+            address = "San Antonio De Padua 2, Block 1 Lot 8 and 2, Dasmarinas, Cavite";
+            phoneNumber = "171-867-411";
+            SSS = "52-2061274-9";
+            Philhealth = "331735646338";
+            Pagibig = "663904995411";
+            Tin = "683-102-776-000";
+            Status = "Regular";
+            Position = "Chief Operating Officer";
+            ImmediateSupervisor = "Garcia, Manuel III";
+   
+        } else if (empNum == 3) {
+            empName = "Aquino, Bianca Sofia";
+            birthday = "8/4/1989";
+            address = "Rm. 402 4/F Jiao Building Timog Avenue Cor. Quezon Avenue 1100, Quezon City";
+            phoneNumber = "966-889-370";
+            SSS = "30-8870406-2";
+            Philhealth = "177451189665";
+            Pagibig = "171519773969";
+            Tin = "971-711-280-000";
+            Status = "Regular";
+            Position = "Chief Finance Officer";
+            ImmediateSupervisor = "Garcia, Manuel III";
+            
+         } else if (empNum == 4) {
+            empName = "Reyes, Isabella";
+            birthday = "6/16/1994";
+            address = "460 Solanda Street Intramuros 1000, Manila";
+            phoneNumber = "786-868-477";
+            SSS = "40-2511815-0";
+            Philhealth = "341911411254";
+            Pagibig = "416946776041";
+            Tin = "876-809-437-000";
+            Status = "Regular";
+            Position = "Chief Marketing Officer";
+            ImmediateSupervisor = "Garcia, Manuel III";
+            
+         } else if (empNum == 5) {
+            empName = "Hernadez, Eduard";
+            birthday = "9/23/1989";
+            address = "National Highway, Gingoog,  Misamis Occidental";
+            phoneNumber = "088-861-012";
+            SSS = "50-5577638-1";
+            Philhealth = "957436191812";
+            Pagibig = "952347222457";
+            Tin = "031-702-374-000";
+            Status = "Regular";
+            Position = "IT Operations and Systems";
+            ImmediateSupervisor = "Lim, Antonio";
+            
+         } else if (empNum == 6) {
+            empName = "Villanueva, Andrea Mae";
+            birthday = "2/14/1988";
+            address = "17/85 Stracke Via Suite 042, Poblacion, Las Piñas 4783 Dinagat Islands";
+            phoneNumber = "918-621-603";
+            SSS = "49-1632020-8";
+            Philhealth = "382189453145";
+            Pagibig = "441093369646";
+            Tin = "317-674-022-000";
+            Status = "Regular";
+            Position = "HR Manager";
+            ImmediateSupervisor = "Lim, Antonio";
+            
+         } else if (empNum == 7) {
+            empName = "San Jose, Brad";
+            birthday = "3/15/1996";
+            address = "99 Strosin Hills, Poblacion, Bislig 5340 Tawi-Tawi";
+            phoneNumber = "797-009-261";
+            SSS = "40-2400714-1";
+            Philhealth = "239192926939";
+            Pagibig = "210850209964";
+            Tin = "672-474-690-000";
+            Status = "Regular";
+            Position = "HR Team Leader";
+            ImmediateSupervisor = "Villanueva, Andrea Mae";
+            
+         } else if (empNum == 8) {
+            empName = "Romualdez, Alice";
+            birthday = "5/14/1992";
+            address = "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte";
+            phoneNumber = "983-606-799";
+            SSS = "55-4476527-2";
+            Philhealth = "545652640232";
+            Pagibig = "211385556888";
+            Tin = "888-572-294-000";
+            Status = "Regular";
+            Position = "HR Rank and File";
+            ImmediateSupervisor = "San, Jose Brad";
+            
+         } else if (empNum == 9) {
+            empName = "Atienza, Rosie";
+            birthday = "9/24/1948";
+            address = "90A Dibbert Terrace Apt. 190, San Lorenzo 6056 Davao del Norte";
+            phoneNumber = "266-036-427";
+            SSS = "41-0644692-3";
+            Philhealth = "708988234853";
+            Pagibig = "260107732354";
+            Tin = "604-997-793-000";
+            Status = "Regular";
+            Position = "HR Rank and File";
+            ImmediateSupervisor = "San, Jose Brad";
+            
+         } else if (empNum == 10) {
+            empName = "Alvaro, Roderick";
+            birthday = "3/30/1988";
+            address = "#284 T. Morato corner, Scout Rallos Street, Quezon City";
+            phoneNumber = "053-381-386";
+            SSS = "64-7605054-4";
+            Philhealth = "578114853194";
+            Pagibig = "799254095212";
+            Tin = "525-420-419-000";
+            Status = "Regular";
+            Position = "Accounting Head";
+            ImmediateSupervisor = "Aquino, Bianca Sofia";
+            
+         } else if (empNum == 11) {
+            empName = "Salcedo, Anthony";
+            birthday = "9/14/1993";
+            address = "93/54 Shanahan Alley Apt. 183, Santo Tomas 1572 Masbate";
+            phoneNumber = "070-766-300";
+            SSS = "26-9647608-3";
+            Philhealth = "126445315651";
+            Pagibig = "218002473454";
+            Tin = "210-805-911-000";
+            Status = "Regular";
+            Position = "Payroll Manager";
+            ImmediateSupervisor = "Alvaro, Roderick";
+            
+         } else if (empNum == 12) {
+            empName = "Lopez, Josie";
+            birthday = "1/14/1987";
+            address = "49 Springs Apt. 266, Poblacion, Taguig 3200 Occidental Mindoro";
+            phoneNumber = "478-355-427";
+            SSS = "44-8563448-3";
+            Philhealth = "431709011012";
+            Pagibig = "113071293354";
+            Tin = "218-489-737-000";
+            Status = "Regular";
+            Position = "Payroll Team Leader";
+            ImmediateSupervisor = "Salcedo, Anthony";
+            
+         } else if (empNum == 13) {
+            empName = "Farala, Martha";
+            birthday = "1/11/1942";
+            address = "42/25 Sawayn Stream, Ubay 1208 Zamboanga del Norte ";
+            phoneNumber = "329-034-366";
+            SSS = "45-5656375-0";
+            Philhealth = "233693897247";
+            Pagibig = "631130283546";
+            Tin = "210-835-851-000";
+            Status = "Regular";
+            Position = "Payroll Rank and File";
+            ImmediateSupervisor = "Salcedo, Anthony";
+            
+         } else if (empNum == 14) {
+            empName = "Martinez, Leila";
+            birthday = "7/11/1970";
+            address = "37/46 Kulas Roads, Maragondon 0962 Quirino";
+            phoneNumber = "877-110-749";
+            SSS = "27-2090996-4";
+            Philhealth = "515741057496";
+            Pagibig = "101205445886";
+            Tin = "275-792-513-000";
+            Status = "Regular";
+            Position = "Payroll Rank and File";
+            ImmediateSupervisor = "Salcedo, Anthony";
+            
+         } else if (empNum == 15) {
+            empName = "Romualdez, Frederick";
+            birthday = "3/10/1985";
+            address = "22A/52 Lubowitz Meadows, Pililla 4895 Zambales";
+            phoneNumber = "023-079-009";
+            SSS = "26-8768374-1";
+            Philhealth = "308366860059";
+            Pagibig = "223057707853";
+            Tin = "598-065-761-000";
+            Status = "Regular";
+            Position = "Account Manager";
+            ImmediateSupervisor = "Lim, Antonio";
+            
+         } else if (empNum == 16) {
+            empName = "Mata, Christian";
+            birthday = "10/21/1987";
+            address = "90 O'Keefe Spur Apt. 379, Catigbian 2772 Sulu";
+            phoneNumber = "783-776-744";
+            SSS = "49-2959312-6";
+            Philhealth = "824187961962";
+            Pagibig = "631052853464";
+            Tin = "103-100-522-000";
+            Status = "Regular";
+            Position = "Account Team Leader";
+            ImmediateSupervisor = "Romualdez, Fredrick";
+            
+         } else if (empNum == 17) {
+            empName = "De Leon, Selena";
+            birthday = "2/20/1975";
+            address = "89A Armstrong Trace, Compostela 7874 Maguindanao";
+            phoneNumber = "975-432-139";
+            SSS = "27-2090208-8";
+            Philhealth = "587272469938";
+            Pagibig = "719007608464";
+            Tin = "482-259-498-000";
+            Status = "Regular";
+            Position = "Account Team Leader";
+            ImmediateSupervisor = "Romualdez, Fredrick";
+            
+         } else if (empNum == 18) {
+            empName = "San Jose, Allison";
+            birthday = "6/24/1986";
+            address = "08 Grant Drive Suite 406, Poblacion, Iloilo City 9186 La Union";
+            phoneNumber = "179-075-129";
+            SSS = "45-3251383-0";
+            Philhealth = "745148459521";
+            Pagibig = "114901859343";
+            Tin = "121-203-336-000";
+            Status = "Regular";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 19) {
+            empName = "Rosario, Cydney";
+            birthday = "10/6/1996";
+            address = "93A/21 Berge Points, Tapaz 2180 Quezon";
+            phoneNumber = "868-819-912";
+            SSS = "49-1629900-2";
+            Philhealth = "579253435499";
+            Pagibig = "265104358643";
+            Tin = "122-244-511-000";
+            Status = "Regular";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 20) {
+            empName = "Bautista, Mark";
+            birthday = "2/12/1991";
+            address = "65 Murphy Center Suite 094, Poblacion, Palayan 5636 Quirino";
+            phoneNumber = "683-725-348";
+            SSS = "49-1647342-5";
+            Philhealth = "399665157135";
+            Pagibig = "260054585575";
+            Tin = "273-970-941-000";
+            Status = "Regular";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 21) {
+            empName = "Lazaro, Darlene";
+            birthday = "11/25/1985";
+            address = "47A/94 Larkin Plaza Apt. 179, Poblacion, Caloocan 2751 Quirino";
+            phoneNumber = "740-721-558";
+            SSS = "45-5617168-2";
+            Philhealth = "606386917510";
+            Pagibig = "104907708845";
+            Tin = "354-650-951-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 22) {
+            empName = "Delos Santos, Kolby";
+            birthday = "2/26/1980";
+            address = "06A Gulgowski Extensions, Bongabon 6085 Zamboanga del Sur";
+            phoneNumber = "739-443-033";
+            SSS = "52-0109570-6";
+            Philhealth = "357451271274";
+            Pagibig = "113017988667";
+            Tin = "187-500-345-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 23) {
+            empName = "Santos, Vella";
+            birthday = "12/31/1983";
+            address = "99A Padberg Spring, Poblacion, Mabalacat 3959 Lanao del Sur";
+            phoneNumber = "955-879-269";
+            SSS = "52-9883524-3";
+            Philhealth = "548670482885";
+            Pagibig = "360028104576";
+            Tin = "101-558-994-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 24) {
+            empName = "Del Rosario, Tomas";
+            birthday = "12/18/1978";
+            address = "80A/48 Ledner Ridges, Poblacion, Kabankalan 8870 Marinduque";
+            phoneNumber = "882-550-989";
+            SSS = "45-5866331-6";
+            Philhealth = "953901539995";
+            Pagibig = "913108649964";
+            Tin = "560-735-732-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "Mata, Christian";
+            
+         } else if (empNum == 25) {
+            empName = "Tolentino, Jacklyn";
+            birthday = "5/19/1984";
+            address = "96/48 Watsica Flats Suite 734, Poblacion, Malolos 1844 Ifugao";
+            phoneNumber = "675-757-366";
+            SSS = "47-1692793-0";
+            Philhealth = "753800654114";
+            Pagibig = "210546661243";
+            Tin = "841-177-857-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 26) {
+            empName = "Gutierrez, Percival";
+            birthday = "12/18/1970";
+            address = "58A Wilderman Walks, Poblacion, Digos 5822 Davao del Sur";
+            phoneNumber = "512-899-876";
+            SSS = "40-9504657-8";
+            Philhealth = "797639382265";
+            Pagibig = "210897095686";
+            Tin = "502-995-671-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 27) {
+            empName = "Manalaysay, Garfield";
+            birthday = "8/28/1986";
+            address = "60 Goyette Valley Suite 219, Poblacion, Tabuk 3159 Lanao del Sur";
+            phoneNumber = "948-628-136";
+            SSS = "45-3298166-4";
+            Philhealth = "810909286264";
+            Pagibig = "211274476563";
+            Tin = "336-676-445-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 28) {
+            empName = "Villegas, Lizeth";
+            birthday = "12/12/1981";
+            address = "66/77 Mann Views, Luisiana 1263 Dinagat Islands";
+            phoneNumber = "332-372-215";
+            SSS = "40-2400719-4";
+            Philhealth = "934389652994";
+            Pagibig = "122238077997";
+            Tin = "210-395-397-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 29) {
+            empName = "Ramos, Carol";
+            birthday = "8/20/1978";
+            address = "72/70 Stamm Spurs, Bustos 4550 Iloilo";
+            phoneNumber = "250-700-389";
+            SSS = "60-1152206-4";
+            Philhealth = "351830469744";
+            Pagibig = "212141893454";
+            Tin = "395-032-717-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 30) {
+            empName = "Maceda, Emelia";
+            birthday = "4/14/1973";
+            address = "50A/83 Bahringer Oval Suite 145, Kiamba 7688 Nueva Ecija";
+            phoneNumber = "973-358-041";
+            SSS = "54-1331005-0";
+            Philhealth = "465087894112";
+            Pagibig = "515012579765";
+            Tin = "215-973-013-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 31) {
+            empName = "Aguilar, Delia";
+            birthday = "1/27/1989";
+            address = "95 Cremin Junction, Surallah 2809 Cotabato";
+            phoneNumber = "529-705-439";
+            SSS = "52-1859253-1";
+            Philhealth = "136451303068";
+            Pagibig = "110018813465";
+            Tin = "599-312-588-000";
+            Status = "Probationary";
+            Position = "Account Rank and File";
+            ImmediateSupervisor = "De Leon, Selena";
+            
+         } else if (empNum == 32) {
+            empName = "Castro, Jihn Rafael";
+            birthday = "2/9/1992";
+            address = "Hi-way, Yati, Liloan Cebu";
+            phoneNumber = "332-424-955";
+            SSS = "26-7145133-4";
+            Philhealth = "601644902402";
+            Pagibig = "697764069311";
+            Tin = "404-768-309-000";
+            Status = "Regular";
+            Position = "Sales & Marketing";
+            ImmediateSupervisor = "Reyes, Isabella";
+            
+         } else if (empNum == 33) {
+            empName = "Martinez, Carlos Ian";
+            birthday = "11/16/1990";
+            address = "Bulala, Camalaniugan";
+            phoneNumber = "078-854-208";
+            SSS = "11-5062972-7";
+            Philhealth = "380685387212";
+            Pagibig = "993372963726";
+            Tin = "256-436-296-000";
+            Status = "Regular";
+            Position = "Supply Chain and Logistics";
+            ImmediateSupervisor = "Reyes, Isabella";
+            
+         } else if (empNum == 34) {
+            empName = "Santos, Beatriz";
+            birthday = "8/7/1990";
+            address = "Agapita Building, Metro Manila";
+            phoneNumber = "526-639-511";
+            SSS = "20-2987501-5";
+            Philhealth = "918460050077";
+            Pagibig = "874042259378";
+            Tin = "911-529-713-000";
+            Status = "Regular";
+            Position = "Customer Service and Relations";
+            ImmediateSupervisor = "Reyes, Isabella";
+
+        } else {
+            empName = "Unknown Employee";
+            // ... (other details for unknown employee)
+        }
+
+        if (weeklyTime < 100) {
+            weeklySalary = weeklyTime;
+            regPay = basicSalary * weeklyTime;
+            overtimePay = 0;
+            netPay = regPay;
+        } else {
+            weeklySalary = 200;
+            overTime = weeklyTime - 40;
+            regPay = basicSalary * weeklyTime;
+            overtimePay = basicSalary * overTime;
+            netPay = regPay + overtimePay;
+        }
+
+        System.out.println("-------------------");
+        System.out.println("---PAYROLL SYSTEM---");
+        System.out.println("-------------------");
+        System.out.printf("Employee Number : %d\n", empNum);
+        System.out.println("Employee Name : " + empName);
+        System.out.println("Birthday : " + birthday);
+        System.out.println("Address : " + address);
+        System.out.println("PhoneNumber : " + phoneNumber);
+        System.out.println("SSS : " + SSS);
+        System.out.println("PhilHealth : " + Philhealth);
+        System.out.println("Tin : " + Tin);
+        System.out.println("Status : " + Status);
+        System.out.println("Position : " + Position);
+        System.out.println("Immediate Supervisor: " + ImmediateSupervisor);
+        System.out.println("Basic Salary : " + basicSalary);
+        System.out.println("Weekly time : " + regPay);
+        System.out.println("Overtime Pay : " + overtimePay);
+        System.out.println("Net Pay : " + netPay);
+    }
+}
